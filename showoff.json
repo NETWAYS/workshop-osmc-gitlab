@@ -1,0 +1,36 @@
+{
+  "name": "GitLab",
+  "subtitle": "A tool for all phases in a DevOps lifecycle.",
+  "location": "Nuremberg",
+  "author": "Original author: Michael Friedrich",
+  "release": "1.0.0",
+
+  "favicon": "image/global/favicon.ico",
+
+  "protected": ["presenter", "onepage", "print"],
+  "user": "netways",
+  "password": "awesome",
+
+  "templates" : {
+       "default"   : "global/layouts/netways.tpl"
+  },
+
+  "sections": [
+    {"section": "global/pre/netways/title"},
+    {"section": "global/pre/toc"},
+    {"section": "trainer"},
+    {"section": "global/pre/netways/about"},
+    {"section": "global/pre/hints"},
+
+    {"section":"workshop/00_Organisation"},
+    {"section":"workshop/01_Introduction"},
+    {"section":"workshop/02_Basics"},
+    {"section":"workshop/03_Project"},
+    {"section":"workshop/04_Workflows"},
+    {"section":"workshop/05_CICD"},
+    {"section":"workshop/06_Strategy"},
+    {"section":"workshop/07_Best_Practice"},
+
+    {"section": "global/post"}
+  ]
+}

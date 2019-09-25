@@ -1,0 +1,7 @@
+.DS_Store
+.vagrant
+stats
+*.pdf
+vm/*.ova
+vm/mnt
+trainer/
