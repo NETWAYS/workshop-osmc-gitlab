@@ -42,24 +42,6 @@ handout.
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Create GitLab Project
-
-## Objective: Create a new GitLab app in NWS
-****
-
-* Create a new GitLab app in NWS
-
-## Steps:
-
-****
-
-* Navigate to https://nws.netways.de and register a trial account if not existing
-* Choose Apps > GitLab CE > Basic
-* Deploy the app
-* Choose Access and Live View and set a secure password for the `root` user.
-* Login
-
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution

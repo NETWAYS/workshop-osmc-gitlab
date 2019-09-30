@@ -45,23 +45,6 @@
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Create Milestone and First Issue
-
-## Objective: Create Milestone and First Issue
-****
-
-* Create Milestone and First Issue
-
-## Steps:
-
-****
-
-* Navigate into `Issues > Milestones`
-* Select `New Milestone` and use `v0.1` as title
-* Navigate to `Issues` and select `New issue`
-* Use `Update documentation` as title, add a description
-* Assign the `v0.1` milestone
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
@@ -108,30 +91,6 @@ branch names, review them and then delete them.
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Create Merge Request
-
-## Objective: Create Merge Request
-****
-
-* Create Merge Request
-
-## Steps:
-
-****
-
-* Create/checkout the branch `feature/docs-merge-request`
-* Edit `README.md`, add, commit and push the changes
-* Open the proposed GitLab URL in your browser
-* Fill in the merge request and add `fixes #1` as description
-* Merge the MR and tick `delect source branch`
-* Analyse the history in GitLab/tig and open issue #1
-
-## Bonus:
-
-****
-
-* Run `git fetch --prune` and `git branch -d feature/docs-merge-request`
 
 
 !SLIDE supplemental solutions

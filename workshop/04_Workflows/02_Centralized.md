@@ -88,29 +88,6 @@ for integrating and sharing code changes between repositories.
  * Edit `README.md`, add `This is my local change.`.
  * Commit and try to push, explain the error message
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Collaborate in a central repository
-
-## Objective: Create conflicting history tree
-****
-
-* Create conflicting history tree
-
-## Steps:
-
-****
-
-* Open the GitLab project `training`
-* Edit `README.md`, add `This change is from my colleague.`.
-* Stage & commit the change to master
-
-## Local CLI Steps:
-
-****
-
-* Change into `training` directory
-* Edit `README.md`, add `This is my local change.`.
-* Commit and try to push, explain the error message
 
 
 !SLIDE supplemental solutions
@@ -212,23 +189,6 @@ instead of generating a merge commit.
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Resolve conflicts in a central repository
-
-## Objective: Rebase your local history with the remote repository
-****
-
-* Rebase your local history with the remote repository
-
-## Steps:
-
-****
-
-* Fetch remote with `git fetch`
-* Compare changes with `git diff origin/master`
-* Rebase with `git rebase origin/master`
-* Resolve possible merge conflicts, add them
-* Continue with `git rebase --continue`, push rebased history
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution

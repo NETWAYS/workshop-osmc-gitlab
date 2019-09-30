@@ -65,21 +65,6 @@ Documentation: https://docs.gitlab.com/ce/ci/yaml/README.html#stage
 
 
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: CI: Pipelines
-
-## Create HTML docs from Markdown
-****
-
-* Build a job pipeline with stages
-
-## Steps:
-
-* Edit .gitlab-ci.yml and add stages
-* Add jobs to stages
-* Commit and push the changes
-* Check the GitLab Job Pipelines
-
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
 ****

@@ -40,27 +40,6 @@ history into the development branches.
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Rebase and squash commits
-
-## Objective: Rebase and squash commits
-****
-
-* Rebase and squash commits
-
-## Steps:
-
-* Add 3 commits to the `master` branch and push them.
-* Use `git rebase -i HEAD~3` to start the interactive mode. `HEAD~3` takes the last 3 commits compared to current HEAD.
-* Use `pick` for the top commit`
-* Replace `pick` with `squash` for the other commits
-* Save and edit the final commit message
-* Use `git log` to verify the history
-
-## Bonus:
-
-* Push the changed commit history using `git push -f` and explain what happens
-
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
 ****
@@ -147,23 +126,6 @@ to always force this setting with a small script and cronjob.
 
 
 ~~~ENDSECTION~~~
-
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Force Push and Protected Branches
-
-## Objective: Force Push and Protected Branches
-****
-
-* Try to force push and learn about protected branches in GitLab
-
-## Steps:
-
-* Run `git push -f` in the master branch
-* Explain the error
-* Navigate into `GitLab > Project > Settings > Repository`
-* Temporarily unprotected the `master` branch
-* Run `git push -f` again
-* Protect the `master` branch again and discuss with the trainer
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution

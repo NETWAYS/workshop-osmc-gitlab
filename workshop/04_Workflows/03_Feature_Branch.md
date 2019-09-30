@@ -59,22 +59,6 @@
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Use Feature Branches
-
-## Objective: Create a new feature branch
-****
-
-* Create a new feature branch
-
-## Steps:
-
-****
-
-* Change into `$HOME/training`
-* Use `git checkout -b feature/docs-workflows` to create a new feature branch based on the master
-* Add and commit changes
-* Push the branch to your central repository
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
@@ -130,31 +114,6 @@ The new branch `feature/docs-workflows` will be based on the `master` branch.
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Merge Feature Branches
-
-## Objective: Merge Feature Branches
-****
-
-* Update master branch and merge feature branch
-
-## Steps:
-
-****
-
-* Change into `$HOME/training`
-* Checkout the feature branch `feature/docs-workflows`
-* Edit `README.md`, add and commit the changes
-* Diff the feature branch to the current master with `git diff master`
-* Checkout the `master` branch
-* Merge the feature branch as non-fast-forward with `--no-ff`
-* Show the history tree with `tig` or inside GitLab
-
-## Bonus:
-
-****
-
- * Explain why the forced merge commit with `--no-ff` is important
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution

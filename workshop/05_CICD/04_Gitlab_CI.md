@@ -168,20 +168,6 @@ Reference: https://gitlab.com/gitlab-org/gitlab-runner/blob/master/docs/install/
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Inspect CI Runner settings
-
-## Get CI Runner Token
-****
-
-* Use the GitLab Admin UI to inspect CI runners
-
-## Steps:
-
-* Navigate to Admin > Overview > Runners
-* Inspect the token
-* Check existing runners
-
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
@@ -325,19 +311,6 @@ https://about.gitlab.com/2016/03/01/gitlab-runner-with-docker/
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Create .gitlab-ci.yml
-
-## Create CI configuration
-****
-
-* Create CI configuration file .gitlab-ci.yml
-
-## Steps:
-
-* Create the `.gitlab-ci.yml` file in the `training` directory (vim, nano, etc.)
-* Add `image: alpine:latest` to specify base image
-* Add job `all_tests` with `script` as array element, which itself runs `exit 1`
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
@@ -380,24 +353,6 @@ Future examples and tests work the same way.
 ****
 
 ~~~ENDSECTION~~~
-
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Push to GitLab
-
-## Push CI config and trigger GitLab job
-****
-
-* Add .gitlab-ci.yml to Git and push to GitLab
-
-## Steps:
-
-* Use `git add .gitlab-ci.yml` and commit the change
-* Push the commit into the remote repository
-* Navigate to the project into `CI / CD` and verify the running job
-
-## Bonus:
-
-* Modify the exit code to `0`, add, commit, push and verify again
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
@@ -466,26 +421,6 @@ Reference: https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Practical Example for CI Runners: Preparations
-
-## Prepare container to convert Markdown to HTML
-****
-
-* Prepare container to convert Markdown to HTML
-
-## Steps:
-
-* Modify `.gitlab-ci.yml` and add a `before_script` section after the `image` section
-* Update `apk` package manager and install `python` and `py-pip` packages
-* Use `pip` to install the `markdown` and `Pygments` libraries
-* Commit and push the changes
-
-Example:
-
-    before_script:
-      - apk update && apk add python py-pip
-      - pip install markdown Pygments
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
@@ -573,21 +508,6 @@ Example:
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Practical Example for CI Runners: Create Docs
-
-## Create HTML docs from Markdown
-****
-
-* Create HTML docs from Markdown
-
-## Steps:
-
-* Add a new job `markdown` after the `all_tests` job
-* Add `script` and convert `README.md` to `README.html` using Python
-* Add `artifacts` with `paths` pointing to `README.html`. Expires in `1 week`.
-* Commit and push the changes
-* Download and view the `README.html` file in your browser
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
@@ -689,19 +609,6 @@ Download them, extract them and open the HTML file with your browser.
 
 ~~~ENDSECTION~~~
 
-!SLIDE supplemental exercises
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Practical Example for CI Runners: Update Docs
-
-## Update docs
-****
-
-* Add what you have learned so far into README.md and generate docs
-
-## Steps:
-
-* Edit `README.md`
-* Commit and push changes
-* Download and view the `README.html` file in your browser
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
