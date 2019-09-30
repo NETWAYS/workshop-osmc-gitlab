@@ -8,6 +8,7 @@
   * Navigate to the dashboard
   * Click on `Create a group`
   * Use `osmc` as name
+  * Navigate into `Members` and verify that you're in the group
 
 * Bonus
   * Use the OSMC logo as group avator
@@ -27,4 +28,6 @@
 * Group name: `osmc`
 * Avatar: Use OSMC logo
 * Visibility level: Private
+* Create
+* `Members > Members with access to osmc`
 
