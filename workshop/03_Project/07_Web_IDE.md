@@ -6,7 +6,7 @@
  * which triggers CI pipelines to provide immediate feedback
 * Syntax highlighting
 * Auto-completion
-* Under heavy development, use 11.2+
+* Under heavy development, use 12.2+
 
 ~~~SECTION:handouts~~~
 

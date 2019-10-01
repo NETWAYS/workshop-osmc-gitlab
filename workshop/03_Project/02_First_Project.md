@@ -85,4 +85,7 @@ Follow the instructions and ask the trainer for help in case.
 
 ~~~SECTION:handouts~~~
 
+****
+
+~~~ENDSECTION~~~
 
