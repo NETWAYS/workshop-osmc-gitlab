@@ -1,6 +1,8 @@
 !SLIDE smbullets
-# 
+# Project Graph
 
+* History lines in a graph
+* Similar to tig and GUI clients
 
 ~~~SECTION:handouts~~~
 
