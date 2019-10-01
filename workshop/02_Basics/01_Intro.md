@@ -4,6 +4,11 @@
 !SLIDE smbullets
 # Overview
 
+* First Time GitLab
+* Dashboard
+* Profile & Settings
+* Groups & Authorization
+* Users
 
 ~~~SECTION:handouts~~~
 

@@ -1,5 +1,5 @@
 !SLIDE smbullets
-# Git Server Installation
+# GitLab Installation
 
 This training focuses on a pre-installed GitLab instance.
 

@@ -4,6 +4,10 @@
 !SLIDE smbullets
 # What is GitLab?
 
+"GitLab started as an open source project to help teams collaborate on software development. By delivering new functionality at an industry-leading pace, GitLab now provides a single application for the entire software development and operations lifecycle. GitLab provides everything you need to Manage, Plan, Create, Verify, Package, Release, Configure, Monitor, and Secure your applications."
+
+https://about.gitlab.com/what-is-gitlab/
+
 
 ~~~SECTION:handouts~~~
 
@@ -11,6 +15,7 @@
 
 
 ~~~ENDSECTION~~~
+
 !SLIDE smbullets
 
 # Version Control
@@ -36,5 +41,4 @@ systems which store the file revisions in a database.
 
 
 ~~~ENDSECTION~~~
-
 

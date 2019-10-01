@@ -19,51 +19,14 @@ NETWAYS also provides GitLab hosting services:
 * https://nws.netways.de/products/gitlab-ce
 
 ~~~ENDSECTION~~~
-!SLIDE smbullets
-# Server Overview
-
-* Git server daemon
-* Web interface
-* Entire collaboration suites
-  * GitHub
-  * GitLab
-  * Bitbucket
-
-
-~~~SECTION:handouts~~~
-
-****
-
-
-~~~ENDSECTION~~~
-
-!SLIDE smbullets noprint
-# GitLab
-
-<center><img src="../../_images/server/git_server_gitlab.png" style="width: 800px;" alt="GitLab"/></center>
-
-!SLIDE smbullets printonly
-# GitLab
-
-<center><img src="../../_images/server/git_server_gitlab.png" style="width:450px" alt="GitLab"/></center>
-!SLIDE smbullets noprint
-# GitHub
-
-<center><img src="../../_images/server/git_server_github.png" style="width: 800px;" alt="GitHub"/></center>
-
-!SLIDE smbullets printonly
-# GitHub
-
-<center><img src="../../_images/server/git_server_github.png" style="width:450px" alt="GitHub"/></center>
-
 
 !SLIDE smbullets
-# Server Protocol
+# Protocol
 
-* Read/write access via SSH
-  * `git@github.com:username/repo.git`
 * HTTPS protocol (write access via oauth tokens)
   * `https://my-gitlab.nws.netways.de/username/repo.git`
+* Read/write access via SSH
+  * `git@github.com:username/repo.git`
 * Git protocol
   * `git://domain.com/repo.git`
 * Local protocol
