@@ -64,7 +64,7 @@ Documentation reference: https://docs.gitlab.com/runner/
 * Installation via package repository
 * `gitlab-runner register`
 
-Note: This is not needed for the built-in `docker executor` runner.
+This comes pre-installed in the NWS apps.
 
 ~~~SECTION:handouts~~~
 
@@ -75,31 +75,6 @@ Documentation References:
 https://docs.gitlab.com/runner/install/linux-repository.html
 https://docs.gitlab.com/runner/register/index.html
 
-~~~ENDSECTION~~~
-
-
-!SLIDE smbullets
-# GitLab CI: Container Registry
-
-* Enable the Container Registry (administration server setting)
-* Enable the Container Registry for the project
-* Advanced usage only
-
-~~~SECTION:handouts~~~
-
-****
-
-   @@@ Sh 
-   $ vim /etc/gitlab/gitlab.rb
-
-   registry_external_url 'https://gitlab.example.com:5000'
-
-   $ gitlab-ctl reconfigure
-
-Documentation References:
-
-https://docs.gitlab.com/ce/user/project/container_registry.html
-https://docs.gitlab.com/ce/administration/container_registry.html
 ~~~ENDSECTION~~~
 
 
@@ -276,7 +251,7 @@ Start CLI
 
 Example:
 
-    image: alpine:latest
+    image: centos:7
 
     all_tests:
       script:
@@ -294,16 +269,14 @@ https://about.gitlab.com/2016/03/01/gitlab-runner-with-docker/
 ~~~ENDSECTION~~~
 
 !SLIDE smbullets
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Create .gitlab-ci.yml
+# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Issue: Add CI
 
 * Objective:
- * Create CI configuration for the training project
+ * Create a new issue for adding CI before 1.0.0 release
 * Steps:
- * Create the `.gitlab-ci.yml` file in the `training` directory (vim, nano, etc.)
- * Add `image: alpine:latest` to specify base image
- * Add job `all_tests` with `script` as array element, which itself runs `exit 1`
-
-
+ * Create a new issue "Add CI"
+ * Description contains a bullet list with `- [ ] GitLab CI configuration`.
+ * Add to milestone `1.0.0`
 
 ~~~SECTION:handouts~~~
 
@@ -311,6 +284,45 @@ https://about.gitlab.com/2016/03/01/gitlab-runner-with-docker/
 
 ~~~ENDSECTION~~~
 
+!SLIDE supplemental solutions
+# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
+****
+
+## Issue: Add CI
+
+****
+
+Follow the instructions and ask the trainer for help in case.
+
+~~~SECTION:handouts~~~
+
+****
+
+~~~ENDSECTION~~~
+
+
+!SLIDE smbullets
+# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Create .gitlab-ci.yml
+
+* Objective:
+ * Create CI configuration for the training project
+* Steps:
+ * Navigate to `Project > Details`
+ * Click on `Set up CI/CD`
+ * Edit the `.gitlab-ci.yml` file using the Web IDE
+ * Add `image: centos:7` to specify base image
+ * Add job `all_tests` with `script` as array element, which itself runs `exit 1`
+* Merge Request:
+ * Target branch: `feature/ci` - new merge request
+ * Create the merge request
+ * Description: `fixes #1` to auto-close the issue on merge
+
+
+~~~SECTION:handouts~~~
+
+****
+
+~~~ENDSECTION~~~
 
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
@@ -323,10 +335,7 @@ https://about.gitlab.com/2016/03/01/gitlab-runner-with-docker/
 ### Create CI configuration file
 
     @@@ Sh
-    $ cd $HOME/training
-    $ vim .gitlab-ci.yml
-
-    image: alpine:latest
+    image: centos:7
 
     all_tests:
       script:
@@ -335,18 +344,22 @@ https://about.gitlab.com/2016/03/01/gitlab-runner-with-docker/
 The script will always fail. We will use different exit states to fix it.
 Future examples and tests work the same way.
 
-
 !SLIDE smbullets
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Push to GitLab
+# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Fix failed Merge Request
 
 * Objective:
- * Add .gitlab-ci.yml to Git and push to GitLab
+ * Create Merge Request from .gitlab-ci.yml file
 * Steps:
- * Use `git add .gitlab-ci.yml` and commit the change
- * Push the commit into the remote repository
- * Navigate to the project into `CI / CD` and verify the running job
-* Bonus
- * Modify the exit code to `0`, add, commit, push and verify again
+* Next steps:
+ * Open the Merge Request where CI failed
+ * Click on `Open in Web IDE` to modify the changes again
+ * Fix the exit code to `0`, commit the change
+ * Inspect the CI status with the rocket icon on the right
+ * Once tests are green, merge to master
+ * Open the `Add CI` issue
+
+**Tip**: You can test and fix the CI config in branches
+triggering CI again. CI Inception ;-)
 
 ~~~SECTION:handouts~~~
 
@@ -354,29 +367,21 @@ Future examples and tests work the same way.
 
 ~~~ENDSECTION~~~
 
+
 !SLIDE supplemental solutions
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
 ****
 
-## Push CI config and trigger GitLab job
+## Fix failed Merge Request
 
-****
-
-### Git Add, Commit, Push
+Follow the trainer instructions.
 
     @@@ Sh
-    $ git add .gitlab-ci.yml
-    $ git commit -av -m "Add GitLab CI config"
-    $ git push origin master
-
-### Modify exit code
-
-    @@@ Sh
-    $ vim .gitlab-ci.yml
-
-    image: alpine:latest
+    image: centos:7
 
     all_tests:
       script:
-        - exit 0
+    -    - exit 1
+    +    - exit 0
+
 
