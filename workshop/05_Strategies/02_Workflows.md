@@ -1,8 +1,5 @@
-!SLIDE subsection
-# ~~~SECTION:MAJOR~~~ GitLab Workflows
-
 !SLIDE smbullets
-# Overview
+# Workflows
 
 * Centralized, everyone pushes to master
 * Feature/Fix branches, merged back to master

@@ -26,10 +26,9 @@
     {"section":"workshop/01_Introduction"},
     {"section":"workshop/02_Basics"},
     {"section":"workshop/03_Project"},
-    {"section":"workshop/04_Workflows"},
-    {"section":"workshop/05_CICD"},
-    {"section":"workshop/06_Strategy"},
-    {"section":"workshop/07_Best_Practice"},
+    {"section":"workshop/04_CICD"},
+    {"section":"workshop/05_Strategies"},
+    {"section":"workshop/06_Best_Practice"},
 
     {"section": "global/post"}
   ]
