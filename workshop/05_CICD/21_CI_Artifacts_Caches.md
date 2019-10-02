@@ -36,9 +36,9 @@ https://docs.gitlab.com/ce/ci/caching/
 
 Hint for trainer with macOS
 
-    chmod +x ~/Downloads/mybinary
+    chmod +x ~/Downloads/go-app
     docker run -ti -v ~/Downloads:/mnt ubuntu:bionic bash
-    ./mnt/mybinary
+    ./mnt/go-app
 
 ~~~SECTION:handouts~~~
 
@@ -61,10 +61,10 @@ Follow the instructions and ask the trainer for help in case.
     compile:
       stage: build
       script:
-        - go build -race -ldflags "-extldflags '-static'" -o $CI_PROJECT_DIR/mybinary
+        - go build -race -ldflags "-extldflags '-static'" -o $CI_PROJECT_DIR/go-app
       artifacts:
         paths:
-          - mybinary
+          - go-app
 
 
 
