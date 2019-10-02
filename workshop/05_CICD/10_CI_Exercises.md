@@ -17,12 +17,13 @@
  * Create a new file called `main.go`
  * Commit the change to `feature/go-app` and create a MR with milestone `1.0.0`
 
+main.go:
+
     package main
 
     func main() {
         fmt.Println("Hello from OSMC")
     }
-
 
 ~~~SECTION:handouts~~~
 
@@ -60,12 +61,13 @@ main.go
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Build the Go App with CI
 
 * Objective:
- * Our Go code may not built - test it
+ * Our Go code may or may not work - test it
 * Steps:
  * Navigate to `Repository > Branches`
  * Select `feature/go-app`, open `.gitlab-ci.yml` and edit with the Web IDE
- * Select `Go` from the `Choose a template` dropdown
+ * Select `Go` from the `Choose a template` dropdown (fallback: https://docs.gitlab.com/ee/ci/examples/README.html)
  * Edit `REPO_NAME` with the URL to your project (without `https://`)
+ * **Replace `mybinary` with `go-app`**
  * Commit the changes and inspect CI on the right
 
 ~~~SECTION:handouts~~~
@@ -119,10 +121,10 @@ The resulting .gitlab-ci.yml looks like this:
     compile:
       stage: build
       script:
-        - go build -race -ldflags "-extldflags '-static'" -o $CI_PROJECT_DIR/mybinary
+        - go build -race -ldflags "-extldflags '-static'" -o $CI_PROJECT_DIR/go-app
       artifacts:
         paths:
-          - mybinary
+          - go-app
 
 
 Build fails since we miss an import from `fmt`.
@@ -159,6 +161,10 @@ Build fails since we miss an import from `fmt`.
  * Navigate to `Repository > Branches`
  * Open the `main.go` file with the Web IDE and add the import after the package declaration
  * Commit the change and inspect CI on the right again
+
+main.go:
+
+    package main
 
     import (
         "fmt"
@@ -199,4 +205,24 @@ Follow the instructions and ask the trainer for help in case.
 ~~~ENDSECTION~~~
 
 
+!SLIDE smbullets
 
+# Summary
+
+* Configuration in .gitlab-ci.yml
+* Execute scripts in defined jobs
+* Pass variables to job runs
+* A complete development build pipeline with a Go app
+
+We did not merge the MR to master yet. Everything is developed
+in our `feature/go-app` branch and does not influence other collaborators.
+
+
+
+~~~SECTION:handouts~~~
+
+****
+
+
+
+~~~ENDSECTION~~~

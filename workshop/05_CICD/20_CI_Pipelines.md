@@ -9,7 +9,7 @@ Code => Build => Test => Deploy
 * Direct feedback to developers
 * CI and CD
   * Continuous Integration
-  * Continuous Delivery
+  * Continuous Deployment
 
 ~~~SECTION:handouts~~~
 
@@ -37,124 +37,44 @@ Reference: https://docs.gitlab.com/ce/ci/pipelines.html
 
 ~~~ENDSECTION~~~
 
-!SLIDE smbullets small
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: CI: Pipelines
+!SLIDE smbullets
+# Pipeline Configuration
 
-* Objective:
- * Build a job pipeline with stages
+* Inspect the stages for our Go App.
 
-Example:
+.gitlab-ci.yml:
 
     stages:
       - test
+      - build
       - deploy
 
-    all_tests:
-      stage: test
-
-    markdown:
-      stage: deploy
+* Explain the stage for the `format` job
+* Explain the stage for the `compile` job
 
 ~~~SECTION:handouts~~~
 
 ****
 
-Documentation: https://docs.gitlab.com/ce/ci/yaml/README.html#stage
+
 
 ~~~ENDSECTION~~~
-
-
-
-!SLIDE supplemental solutions
-# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
-****
-
-## Build a job pipeline with stages
-
-****
-
-### Edit .gitlab-ci.yml and add stages
-
-    @@@ Sh
-    $ vim .gitlab-ci.yml
-
-    stages:
-      - test
-      - deploy
-
-### Add jobs to stages
-
-    @@@ Sh
-    $ vim .gitlab-ci.yml
-
-    ...
-
-    all_tests:
-      stage: test
-
-    ...
-
-    markdown:
-      stage: deploy
-
-### Complete example
-
-    @@@ Sh
-    $ vim .gitlab-ci.yml
-
-    image: alpine:latest
-
-    before_script:
-      - apk update && apk add python py-pip
-      - pip install markdown Pygments
-
-    stages:
-      - test
-      - deploy
-
-    all_tests:
-      stage: test
-      script:
-        - exit 0
-
-    markdown:
-      stage: deploy
-      script:
-        - python -m markdown README.md > README.html
-      artifacts:
-        paths:
-        - README.html
-        expire_in: 1 week
-
-### Commit and push the changes
-
-    @@@ Sh
-    $ git commit -av -m "CI: Add pipelines"
-    $ git push
-
-### Check the GitLab Job Pipelines
 
 
 !SLIDE smbullets
-# Jobs, Stages, Pipelines
+# Pipeline in GitLab
 
-* Stage pipeline
+* Navigate to `CI / CD > Pipelines` and inspect the latest run
+* Compare this to previous pipeline runs where it failed before
 
-<center>
-<img src="../../_images/ci/git_gitlab_ci_jobs_stages.png"/>
-</center>
-
-* Failure: Edit the first job to `exit 1`.
-
-<center>
-<img src="../../_images/ci/git_gitlab_ci_jobs_stages_failed.png"/>
-</center>
+<center><img src="../../_images/ci/gitlab_ci_pipeline_go_app.png" style="width:450px" alt="GitLab Pipelines"/></center>
 
 ~~~SECTION:handouts~~~
 
 ****
 
-Reference: https://docs.gitlab.com/ce/ci/pipelines.html
+
 
 ~~~ENDSECTION~~~
+
 
