@@ -51,7 +51,7 @@ Follow the instructions and ask the trainer for help in case.
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Add Issue Templates
 
 * Objective:
- * Add issue templates
+ * Add issue templates: bug
 * Steps:
  * Navigate to `Repository > Files` and open the Web IDE
  * Create a new file in `.gitlab/issue_templates/bug.md`
@@ -59,8 +59,43 @@ Follow the instructions and ask the trainer for help in case.
  * Commit the change
  * Navigate into `Issues > New Issue`
  * Select the `bug` template from the dropdown
-* Bonus:
- * Add a task list with `- [ ] task1`
+
+https://docs.gitlab.com/ee/user/project/description_templates.html
+
+~~~SECTION:handouts~~~
+
+https://gitlab.com/gitlab-org/gitlab/tree/master/.gitlab
+
+****
+
+~~~ENDSECTION~~~
+
+!SLIDE supplemental solutions
+# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Proposed Solution
+****
+
+## Add Issue Labels
+
+****
+
+Follow the instructions and ask the trainer for help in case.
+
+
+~~~SECTION:handouts~~~
+
+!SLIDE smbullets small
+# Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Add Issue Templates
+
+* Objective:
+ * Add issue templates: feature
+* Steps:
+ * Navigate to `Repository > Files` and open the Web IDE
+ * Create a new file in `.gitlab/issue_templates/feature.md`
+ * Add two headings: `# Story` and `# Tasks`
+ * Add a task list `- [ ] Feature` and `- [ ] Docs`
+ * Commit the change
+ * Navigate into `Issues > New Issue`
+ * Select the `feature` template from the dropdown
 
 https://docs.gitlab.com/ee/user/project/description_templates.html
 
