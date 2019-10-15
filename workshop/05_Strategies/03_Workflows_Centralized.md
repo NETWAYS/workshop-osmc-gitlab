@@ -80,11 +80,11 @@ for integrating and sharing code changes between repositories.
 * Objective:
  * Create conflicting history tree
 * Steps:
- * Open the GitLab project `training`
- * Edit `README.md`, add `This change is from my colleague.`.
+ * Navigate into the `workshop` project
+ * Edit `README.md` with the Web IDE, add `This change is from my colleague.`.
  * Stage & commit the change to master
 * Local steps:
- * Change into `training` directory
+ * Change into `$HOME/workshop` directory
  * Edit `README.md`, add `This is my local change.`.
  * Commit and try to push, explain the error message
 
@@ -100,7 +100,7 @@ for integrating and sharing code changes between repositories.
 
 ### Create remote commit in GitLab
 
-Navigate into the `training` project in GitLab and select
+Navigate into the `workshop` project in GitLab and select
 the `Repository` view.
 
 Click onto `README.md` and choose to edit it from the browser.
@@ -111,7 +111,7 @@ Stage and commit the change to the master branch.
 
 ### Create local commit on the CLI
 
-Change into the `training` directory, edit the `README.md` file
+Change into the `workshop` directory, edit the `README.md` file
 and commit the changes.
 
     @@@ Sh

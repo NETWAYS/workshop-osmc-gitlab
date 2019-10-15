@@ -48,7 +48,7 @@
 * Objective:
  * Create a new feature branch `feature/docs-workflows`
 * Steps:
- * Change into `$HOME/training`
+ * Change into `$HOME/workshop`
  * Use `git checkout -b feature/docs-workflows` to create a new feature branch based on the master
  * Add and commit changes
  * Push the branch to your central repository
@@ -73,7 +73,7 @@
 The new branch `feature/docs-workflows` will be based on the `master` branch.
 
     @@@ Sh
-    $ cd $HOME/training
+    $ cd $HOME/workshop
     $ git checkout master
     $ git checkout -b feature/docs-workflows
 
@@ -106,7 +106,9 @@ The new branch `feature/docs-workflows` will be based on the `master` branch.
  * Edit `README.md`, add and commit the changes
  * Diff the feature branch to the current master with `git diff master`
  * Checkout the `master` branch, merge the feature branch as non-fast-forward with `--no-ff`
- * Show the history tree with `tig` or inside GitLab and explain why the forced merge commit with `--no-ff` is important
+ * Push the changes
+ * Open `Project > Graph` in GitLab
+ * Explain why the forced merge commit with `--no-ff` is important
 
 ~~~SECTION:handouts~~~
 
@@ -126,7 +128,7 @@ The new branch `feature/docs-workflows` will be based on the `master` branch.
 ### Checkout the feature branch and add a commit
 
     @@@ Sh
-    $ cd $HOME/training
+    $ cd $HOME/workshop
     $ git checkout feature/docs-workflows
     $ vim README.md
 
@@ -157,8 +159,9 @@ The new branch `feature/docs-workflows` will be based on the `master` branch.
 ### Examine the history
 
     @@@ Sh
-    $ tig
+    $ git push
 
+Open `Repository > Graph` in GitLab.
 
 
 
