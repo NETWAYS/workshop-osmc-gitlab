@@ -6,7 +6,7 @@
  * which triggers CI pipelines to provide immediate feedback
 * Syntax highlighting
 * Auto-completion
-* Under heavy development, use 12.2+
+* Under heavy development, use 12.3+
 
 ~~~SECTION:handouts~~~
 
@@ -23,13 +23,12 @@ https://blog.netways.de/2018/06/28/a-peek-into-gitlab-11-the-web-ide-and-auto-de
 # Lab ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~: Update README.md with the Web IDE
 
 * Objective:
- * Use the Web IDE to write documentation and verify CI results
+ * Use the Web IDE to write documentation
 * Steps:
- * Navigate to `Repository > Files` and click `Web IDE`
+ * Navigate to `Repository > Files` and select `Web IDE`
  * Select `README.md` from the tree
  * Edit the file, use the live preview
  * Commit the changes, select `Commit to master branch`
- * Select the rocket icon on the right, check the pipeline status
 
 
 ~~~SECTION:handouts~~~
