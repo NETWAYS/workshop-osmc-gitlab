@@ -1,5 +1,4 @@
 !SLIDE smbullets
-
 # Directed Acyclic Graph
 
 * Pipeline stages need to wait for job completion in each stage
@@ -33,4 +32,31 @@ https://docs.gitlab.com/ce/ci/directed_acyclic_graph/
 
 
 ~~~ENDSECTION~~~
+
+
+!SLIDE smbullets
+# Matrix for Build Jobs
+
+Travis CI allows to test multiple language versions, with a build matrix as result.
+
+    language: php
+
+    php:
+      - '7.1'
+      - '7.2'
+      - '7.3'
+
+GitLab currently needs multiple jobs. This should become easier with
+https://gitlab.com/gitlab-org/gitlab/issues/15356
+
+
+~~~SECTION:handouts~~~
+
+****
+
+
+~~~ENDSECTION~~~
+
+
+!SLIDE smbullets
 
