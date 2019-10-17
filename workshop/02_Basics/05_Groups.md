@@ -11,7 +11,7 @@
   * Navigate into `Members` and verify that you're in the group
 
 * Bonus
-  * Use the OSMC logo as group avator
+  * Use the OSMC logo as group avatar
 
 ~~~SECTION:handouts~~~
 

@@ -1,7 +1,7 @@
 !SLIDE smbullets
 # Explore the User Profile
 
-* Select the user avator and `Profile`
+* Select the user avatar and `Profile`
 * Learn more about
   * Activity
   * Projects
@@ -17,7 +17,7 @@
 !SLIDE smbullets
 # Explore the User Settings
 
-* Select the user avator and `Settings`
+* Select the user avatar and `Settings`
 * Learn more about
   * Avatar
   * Status
