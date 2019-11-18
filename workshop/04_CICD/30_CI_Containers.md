@@ -144,7 +144,7 @@ Dockerfile:
 * Steps:
  * Open the project details and click on `Setup CI / CD`
  * Select the `Docker` template (fallback: https://docs.gitlab.com/ee/ci/examples/README.html)
- * Add the `variables` section on top, overriding the CI_CONTAINER_IMAGE variable with the local path:
+ * Add the `variables` section on top, overriding the CI_REGISTRY_IMAGE variable with the local path:
  * Commit the change and inspect the CI pipeline on the right (rocket icon)
 
 .gitlab-ci.yml:
