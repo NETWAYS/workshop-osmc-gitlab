@@ -1,4 +1,43 @@
 !SLIDE smbullets
+# Code Coverage Reports
+
+* CI jobs can parse output and present coverage
+* Write a function and unit test
+* Navigate to `Settings > CI/CD > General pipeline settings > Test coverage parsing`
+* Use `^total:\t+\(statements\)\t+(\d+\.\d+)%` for Go
+* View the job listing
+
+https://www.netways.de/blog/2018/06/07/continuous-integration-with-golang-and-gitlab/
+
+~~~SECTION:handouts~~~
+
+****
+
+
+~~~ENDSECTION~~~
+
+
+!SLIDE smbullets small
+# CI Pipeline Badges
+
+* Immediately see the build status in the main project view
+    * Embedded SVG into README.md
+
+Example:
+
+    ![build](https://....nws.netways.de/osmc/workshop/badges/master/build.svg)
+    ![coverage](https://....nws.netways.de/osmc/workshop/badges/master/coverage.svg)
+
+https://docs.gitlab.com/ee/user/project/badges.html
+
+~~~SECTION:handouts~~~
+
+****
+
+
+~~~ENDSECTION~~~
+
+!SLIDE smbullets
 # Directed Acyclic Graph
 
 * Pipeline stages need to wait for job completion in each stage
